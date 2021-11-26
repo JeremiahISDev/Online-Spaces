@@ -2,12 +2,18 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
-
+function current(page) {
+  if (window.location.href === page) {
+    return true;
+  } else {
+    return false;
+  }
+};
 const navigation = [
-  { name: 'Home', href: '#', current: true },
-  { name: 'Pricing', href: '#', current: false },
-  { name: 'Contact', href: '#', current: false },
-  { name: 'About Us', href: '#', current: false },
+  { name: 'Home', href: '', current: current('home') },
+  { name: 'Pricing', href: '/pricing', current: current('pricing')  },
+  { name: 'Contact', href: '/contact', current: current('contact')  },
+  { name: 'About Us', href: '/aboutus', current: current('aboutus')  },
 ]
 
 function classNames(...classes) {
