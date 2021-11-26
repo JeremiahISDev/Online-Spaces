@@ -1,5 +1,6 @@
-export { default as Navigation } from "./Navigation.jsx";
-export { default as Footer } from "./Footer.jsx";
-export { default as Home } from "./Home.jsx";
-export { default as About } from "./About.jsx";
-export { default as Contact } from "./Contact.jsx";
+export { default as Navigation } from "./Navigation";
+export { default as Footer } from "./Footer";
+export { default as Home } from "./Home";
+export { default as About } from "./About";
+export { default as Contact } from "./Contact";
+export { default as Try } from "./Try";
