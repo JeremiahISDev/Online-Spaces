@@ -3,14 +3,14 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 function current(page) {
-  if (window.location.href === page) {
+  if (window.location.href == page) {
     return true;
   } else {
     return false;
   }
 };
 const navigation = [
-  { name: 'Home', href: '', current: current('home') },
+  { name: 'Home', href: '', current: current('') },
   { name: 'Pricing', href: '/pricing', current: current('pricing')  },
   { name: 'Contact', href: '/contact', current: current('contact')  },
   { name: 'About Us', href: '/aboutus', current: current('aboutus')  },
