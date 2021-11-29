@@ -1,31 +1,4 @@
-/* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from 'react'
-import NavLink from 'react-router-dom'
-import { Disclosure } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
-
-function current(slash){
-	var urlA = 'online-spaces.repl.co'+slash;
-	var urlB = 'online-spaces.netlify.app'+slash;
-	if (window.location.href === urlA || window.location.href === urlB){
-		return true;
-	} else{
-		return false;
-	}
-};
-
-const navigation = [
-  { name: 'Home', href: '/', current: current('/') },
-  { name: 'Pricing', href: '/pricing', current: current('/pricing') },
-  { name: 'Contact', href: '/contact', current: current('/contact') },
-  { name: 'About Us', href: '/aboutus', current: current('/aboutus') },
-  { name: 'Try Free', href: '/try', current: current('/try') },
-]
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
+import { NavLink } from 'react-router-dom'
 export default function Example() {
   return (
     
@@ -34,28 +7,28 @@ export default function Example() {
         <div class="max-w-7xl mx-auto px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="w-full justify-between flex items-center">
-                    <a class="flex-shrink-0" href="/">
+                    <NavLink class="flex-shrink-0" href="/">
                         <img class="h-8 w-8" src="/icons/rocket.svg" alt="Workflow"/>
-                    </a>
+                    </NavLink>
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-4">
-                            <a class="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="/#">
+                            <NavLink class="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="/#">
                                 Home
-                            </a>
-                            <a class="text-gray-800 dark:text-white  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="/Pricing">
+                            </NavLink>
+                            <NavLink class="text-gray-800 dark:text-white  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="/Pricing">
                                 Pricing
-                            </a>
-                            <a class="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="/contact">
+                            </NavLink>
+                            <NavLink class="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="/contact">
                                 Contact
-                            </a>
-                            <a class="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="/aboutus">
+                            </NavLink>
+                            <NavLink class="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="/aboutus">
                                 About Us
-                            </a>
-							 <a class="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="/try">
+                            </NavLink>
+							 <NavLink class="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="/try">
                                  <button class="flex-shrink-0 px-4 py-2 text-base font-semibold text-white bg-purple-600 rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200">
                                     Try One Free Meeting!
                                 </button>
-                            </a>
+                            </NavLink>
                         </div>
                     </div>
                 </div>
@@ -75,18 +48,18 @@ export default function Example() {
         </div>
         <div class="md:hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a class="text-gray-300 hover:text-gray-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/">
+                <NavLink class="text-gray-300 hover:text-gray-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/">
                     Home
-                </a>
-                <a class="text-gray-800 dark:text-white block px-3 py-2 rounded-md text-base font-medium" href="/#">
+                </NavLink>
+                <NavLink class="text-gray-800 dark:text-white block px-3 py-2 rounded-md text-base font-medium" href="/#">
                     Gallery
-                </a>
-                <a class="text-gray-300 hover:text-gray-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/#">
+                </NavLink>
+                <NavLink class="text-gray-300 hover:text-gray-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/#">
                     Content
-                </a>
-                <a class="text-gray-300 hover:text-gray-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/#">
+                </NavLink>
+                <NavLink class="text-gray-300 hover:text-gray-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/#">
                     Contact
-                </a>
+                </NavLink>
             </div>
         </div>
     </nav>
