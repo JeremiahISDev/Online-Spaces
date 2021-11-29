@@ -6,7 +6,7 @@ export default function Example() {
 					<div class="flex items-center justify-between h-16">
 						<div class="w-full justify-between flex items-center">
 							<a class="flex-shrink-0" href="/">
-								<img class="h-15 w-15" src="../assets/Logo.png" alt="Online Spaces" />
+								<img class="h-12 w-12" src="../assets/Logo.png" alt="Online Spaces" />
 							</a>
 							<div class="hidden md:block">
 								<div class="ml-10 flex items-baseline space-x-4">
