@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Navigation, Footer, Home, About, Contact, Pricing, Try } from "./components";
+import { Navigation, Footer, Home, About, Contact, Pricing, Try, SignUp } from "./components";
 
 ReactDOM.render(
   <Router>
@@ -12,7 +12,8 @@ ReactDOM.render(
 	  <Route path="/pricing" element={<Pricing />} />
 	        <Route path="/contact" element={<Contact />} />
       <Route path="/aboutus" element={<About />} />
-<Route path="/try" element={<Try />} />
+      <Route path="/try" element={<Try />} />
+      <Route path="/signup" element={<SignUp />} />
     </Routes>
     <Footer />
   </Router>,
