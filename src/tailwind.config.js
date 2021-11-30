@@ -3,6 +3,9 @@ module.exports = {
   darkMode: 'media',
   theme: {
     extend: {},
+    container: {
+      center: true,
+    },
   },
   variants: {
     extend: {},

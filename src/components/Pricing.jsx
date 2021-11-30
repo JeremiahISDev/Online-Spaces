@@ -4,7 +4,12 @@ function Pricing() {
   return (
     <div className="contact">
       <div class="container">
-        <Free />
+        <div className="cards flex items-center place-items-center">
+          <Free />
+          <Premium />
+          <Enterprise/>
+        </div>
+        
       </div>
     </div>
   );
