@@ -1,0 +1,16 @@
+{
+    "username": "BobbyB",
+    "Email": "bobbyb@gmail.com",
+    "Password": "32156mbhhjy",
+    "meetings":{
+        "1":{
+            "Name": "My Meeting",
+            "Time":"11/23/2021 7:00",
+            "Description": "blah blah blah",
+            "complete": true,
+            "upcomming": true,
+            "present": true,
+            "template": false
+        }
+    }
+}
