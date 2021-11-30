@@ -11,11 +11,11 @@ export default function Example() {
               src="../assets/Logo.png"
               alt="Online Spaces"
             />
-            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Create An Account</h2>
+            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign In</h2>
             <p className="mt-2 text-center text-sm text-gray-600">
               Or{' '}
-              <a href="/signin" className="font-medium text-indigo-600 hover:text-indigo-500">
-                Sign In
+              <a href="/signup" className="font-medium text-indigo-600 hover:text-indigo-500">
+                Create An Account
               </a>
             </p>
           </div>
@@ -24,7 +24,7 @@ export default function Example() {
             <div className="rounded-md shadow-sm -space-y-px">
               <div>
                 <label htmlFor="email" className="sr-only">
-                  Email Adress
+                  Email Address
                 </label>
                 <input
                   id="email"
