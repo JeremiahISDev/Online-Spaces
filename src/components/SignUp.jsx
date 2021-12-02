@@ -93,14 +93,6 @@ export default function Example() {
               </button>
             </div>
           </form>
-          <div class="mssg bg-danger">
-			<span id="check"></span>
-		</div>
-		<div>
-			<span>Already Registered!<a href="/SignIn">Login</a></span>
-		</div>
-		<div id="LangTable"><a href="/SignIn" id="aa"></a>
-		</div>
         </div>
       </div>
     </>
