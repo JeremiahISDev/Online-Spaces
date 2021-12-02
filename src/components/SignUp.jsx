@@ -29,7 +29,7 @@ export default function Example() {
          				error: function() {
          				}
          			})
-			});
+			})
 		});
         </script>
         <div className="max-w-md w-full space-y-8">
