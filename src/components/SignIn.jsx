@@ -76,11 +76,6 @@ return (
       </button>
     </div>
   </form>
-  <div class="mssg bg-danger">
-<span id="check"></span>
-</div>
-<div id="LangTable"><a href="/dashboard" id="aa"></a>
-</div>
 </div>
 </div>
 )
