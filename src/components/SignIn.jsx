@@ -4,10 +4,10 @@ export default function Example() {
 return (
 <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
   <script>
-    $(document).ready(function(){
-      $("#form").submit(function (event) {
+    document.ready(function(){
+      "#form".submit(function (event) {
         event.preventDefault();
-          $.ajax({
+          ajax({
           type: 'POST',
           url: '/SignIn',
           data: $('#form').serialize(),
@@ -15,7 +15,7 @@ return (
           success: function (response) {
             //alert("a");
             //console.log(response.Success);
-            $('#form')[0].reset();
+            '#form'[0].reset();
             document.getElementById("check").innerHTML = response.Success;
             //ADD THIS CODE
             setTimeout(function () {
