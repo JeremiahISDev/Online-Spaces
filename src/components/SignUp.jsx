@@ -1,37 +1,10 @@
 import { LockClosedIcon } from '@heroicons/react/solid'
-
+import SignUpScript from "./SignUpScript.ejs";
 export default function Example() {
   return (
     <>
       <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-        <script>
-        document.ready(function(){
-			"#form1".submit(function(event) {
-				event.preventDefault();
-				ajax({
-					type: 'POST',
-					url: '/',
-					data: $('#form1').serialize(),
-					dataType: "json",
-					success: function(response){
-						//alert("a");
-						//console.log(response.Success);
-						'#form1'[0].reset();
-						document.getElementById("check").innerHTML=response.Success;
-         					//ADD THIS CODE
-         					setTimeout(function(){
-         						document.getElementById("check").innerHTML="";
-         					},3000);
-         					if (response.Success=="You are regestered,You can login now.") {
-         						document.getElementById("aa").click();
-         					};
-         				},
-         				error: function() {
-         				}
-         			})
-			})
-		});
-        </script>
+        <SignUpScript/>
         <div className="max-w-md w-full space-y-8">
           <div>
             <img
