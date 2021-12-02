@@ -1,9 +1,36 @@
 import { LockClosedIcon } from '@heroicons/react/solid'
-
 export default function Example() {
   return (
-    <>
+    <div>
       <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <script>
+          $(document).ready(function(){
+            $("#form").submit(function (event) {
+              event.preventDefault();
+              $.ajax({
+                type: 'POST',
+                url: '/login',
+                data: $('#form').serialize(),
+                dataType: "json",
+                success: function (response) {
+                  //alert("a");
+                  //console.log(response.Success);
+                  $('#form')[0].reset();
+                  document.getElementById("check").innerHTML = response.Success;
+                  //ADD THIS CODE
+                  setTimeout(function () {
+                    document.getElementById("check").innerHTML = "";
+                  }, 3000);
+                  if (response.Success == "Success!") {
+                    document.getElementById("aa").click();
+                  };
+                },
+                error: function () {
+                }
+              })
+            })};
+      {});
+        </script>
         <div className="max-w-md w-full space-y-8">
           <div>
             <img
@@ -19,7 +46,7 @@ export default function Example() {
               </a>
             </p>
           </div>
-          <form className="mt-8 space-y-6" action="/dashboard" method="POST">
+          <form className="mt-8 space-y-6" id="form" method="POST">
             <input type="hidden" name="remember" defaultValue="true" />
             <div className="rounded-md shadow-sm -space-y-px">
               <div>
@@ -78,8 +105,12 @@ export default function Example() {
               </button>
             </div>
           </form>
+          <div class="mssg bg-danger">
+			<span id="check"></span>
+		</div>
+		<div id="LangTable"><a href="/dashboard" id="aa"></a>
         </div>
       </div>
-    </>
-  )
-}
+    </div>
+      );
+  }
