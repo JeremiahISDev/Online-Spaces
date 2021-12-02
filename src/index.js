@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import "./App.js"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navigation, Footer, Home, About, Contact, Pricing, SignUp, SignIn } from "./components";
 
