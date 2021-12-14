@@ -1,4 +1,3 @@
-import clientPromise from "../lib/mongodb.js";
 import { LockClosedIcon } from '@heroicons/react/solid'
 export default function SignIn() {
 return (
@@ -80,17 +79,4 @@ return (
 </div>
 </div>
 )
-}
-
-export async function getServerSideProps(context) {
-  const client = await clientPromise;
-
-  const db = client.db("OnlineSpaces");
-
-  let users = await db.collection("Users").find({}).toArray();
-  users = JSON.parse(JSON.stringify(users));
-
-  return {
-    props: { users }
-  };
 }
